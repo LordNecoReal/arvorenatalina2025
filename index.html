@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Natal Mágico - Lord Neco</title>
+</head>
+<body>
+    <div class="room">
+        <header class="top-bar">
+            <div class="instructions">
+                <h3>Guia de Natal</h3>
+                <ul>
+                    <li>Abra os presentes em ordem.</li>
+                    <li>Ouça o sino e a mensagem.</li>
+                    <li>Aguarde a revelação final.</li>
+                </ul>
+            </div>
+            <h1 class="greeting">Desejo um feliz natal, com muita fartura e um belo ano novo com tudo que desejar</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="tree">
+                <div class="star"></div>
+                
+                <div class="layer t1">
+                    <div class="lights"></div>
+                    <span class="ball" style="top: 70%; left: -10px; background: gold;"></span>
+                </div>
+                
+                <div class="layer t2">
+                    <div class="lights"></div>
+                    <span class="ball" style="top: 50%; left: -40px; background: #ff3333;"></span>
+                    <span class="ball" style="top: 80%; right: -30px; background: #ffffff;"></span>
+                </div>
+                
+                <div class="layer t3">
+                    <div class="lights"></div>
+                    <span class="ball" style="top: 40%; left: -80px; background: #3333ff;"></span>
+                    <span class="ball" style="top: 70%; right: -70px; background: gold;"></span>
+                </div>
+                
+                <div class="trunk"></div>
+            </div>
+
+            <div class="presents-row">
+                <div class="gift-item" id="g1" onclick="handleGift(1)">
+                    <div class="msg-bubble" id="m1">Não desista, você é incrível e ninguém vai te parar!</div>
+                    <div class="gift-wrap red"><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow"></div><div class="lid"></div></div>
+                </div>
+                <div class="gift-item locked" id="g2" onclick="handleGift(2)">
+                    <div class="msg-bubble" id="m2">Sempre que alguém te ofender, diga "Deus tome conta".</div>
+                    <div class="gift-wrap blue"><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow"></div><div class="lid"></div></div>
+                </div>
+                <div class="gift-item locked" id="g3" onclick="handleGift(3)">
+                    <div class="msg-bubble" id="m3">O ciclo se encerra, mas seu aprendizado continua!</div>
+                    <div class="gift-wrap green"><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="bow"></div><div class="lid"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="finalModal">
+            <div class="modal-card">
+                <h2>✨ Benção dos Deuses ✨</h2>
+                <p>Feliz natal! Que os deuses te abençoem hoje e sempre. Jamais mude por ninguém!</p>
+                <button onclick="location.reload()">Celebrar de Novo</button>
+            </div>
+        </div>
+
+        <div class="floor">
+            <footer><p>Criado por Lord Neco</p></footer>
+        </div>
+    </div>
+
+    <audio id="giftSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
